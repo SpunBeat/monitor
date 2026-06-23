@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+# Keep example env files
+!.env.example
+.angular
+coverage
+*.log
+.DS_Store
