@@ -1,11 +1,27 @@
-export interface MetricSnapshot {}
+export interface CpuMetric {
+  currentLoad: number;
+}
 
-export interface CpuMetric {}
+export interface RamMetric {
+  total: number;
+  active: number;
+}
 
-export interface RamMetric {}
+export interface DiskMetric {
+  size: number;
+  used: number;
+}
 
-export interface DiskMetric {}
+export interface NetworkMetric {
+  rx_sec: number;
+  tx_sec: number;
+}
 
-export interface NetworkMetric {}
+export interface MetricSnapshot {
+  timestamp: string;
+  cpu: CpuMetric;
+  ram: RamMetric;
+  disk: DiskMetric;
+  network: NetworkMetric;
+}
 
-export interface LatencyMetric {}
